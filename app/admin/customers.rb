@@ -6,20 +6,16 @@ ActiveAdmin.register Customer do
                 :notes,
                 :image
 
+  config.filters = false
+
   form do |f|
 
     f.inputs do
-
       f.input :full_name
-
       f.input :phone_number
-
       f.input :email_address
-
       f.input :notes
-
       f.input :image, as: :file
-
     end
 
     f.actions
