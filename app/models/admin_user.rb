@@ -3,7 +3,7 @@ class AdminUser < ApplicationRecord
          :recoverable,
          :rememberable,
          :validatable
-  config.filters = false
+
   def self.ransackable_attributes(auth_object = nil)
     [
       "id",

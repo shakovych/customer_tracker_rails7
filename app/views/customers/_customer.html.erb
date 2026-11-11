@@ -1,0 +1,25 @@
+<div class="customer-card">
+
+  <% if customer.image.attached? %>
+    <%= image_tag customer.image,
+                  width: 180,
+                  height: 180 %>
+  <% end %>
+
+  <h3><%= customer.full_name %></h3>
+
+  <p>
+    <strong>Phone:</strong><br>
+    <%= customer.phone_number %>
+  </p>
+
+  <p>
+    <strong>Email:</strong><br>
+    <%= customer.email_address.presence || "Missing Email" %>
+  </p>
+
+  <p>
+    <%= customer.notes %>
+  </p>
+
+</div>
